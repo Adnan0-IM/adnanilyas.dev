@@ -17,7 +17,7 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl">About</h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-5 gap-2 sm:gap-8">
             <div className="md:col-span-2">
               <h3 className="text-lg md:text-xl text-muted-foreground">
                 How I build software
