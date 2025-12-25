@@ -60,7 +60,7 @@ const Hero = () => {
               }}
               className="text-lg"
             >
-              Full Stack Engineer from Kano state, Nigeria
+              Full Stack Engineer from Nigeria, Kano state.
             </motion.p>
 
             <motion.p
