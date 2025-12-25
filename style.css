@@ -1,0 +1,93 @@
+:root {
+  /* Background pattern controls */
+  /* --site-bg-pattern-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ddd' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --site-bg-pattern-size-x: 28px;
+  --site-bg-pattern-size-y: 49px; */
+  /* Subtle tint based on theme; adjust the percentage to taste */
+  /* --site-bg-pattern-color: color-mix(
+    in oklch,
+    var(--foreground) 14%,
+    transparent
+  ); */
+}
+:root {
+  --site-bg-pattern-image: url("/icon.svg"); /* or /assets/patterns/hex.svg */
+  --site-bg-pattern-size-x: 28px; /* match your SVG's viewBox width */
+  --site-bg-pattern-size-y: 49px; /* match your SVG's viewBox height */
+  --site-bg-pattern-color: color-mix(
+    in oklch,
+    var(--foreground) 22%,
+    transparent
+  );
+}
+.dark {
+  /* Slightly dimmer tint in dark mode */
+  --site-bg-pattern-color: color-mix(
+    in oklch,
+    var(--foreground) 22%,
+    transparent
+  );
+}
+
+@keyframes patternScrollBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+@keyframes patternScrollMask {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 200% 200%;
+    mask-position: 200% 200%;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Pattern layers are defined in @supports blocks below */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}
+
+/* Modern coloring via mask-image: lets us tint with CSS variables */
+@supports ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
+  body::before {
+    background-color: var(--site-bg-pattern-color);
+    -webkit-mask-image: var(--site-bg-pattern-image);
+    mask-image: var(--site-bg-pattern-image);
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    -webkit-mask-size: var(--site-bg-pattern-size-x)
+      var(--site-bg-pattern-size-y);
+    mask-size: var(--site-bg-pattern-size-x) var(--site-bg-pattern-size-y);
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    animation: patternScrollMask 400s linear infinite;
+  }
+}
+
+/* Fallback for older browsers: uses the SVG fill color as-is */
+@supports not ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
+  body::before {
+    background-image: var(--site-bg-pattern-image);
+    background-repeat: repeat;
+    background-size: var(--site-bg-pattern-size-x) var(--site-bg-pattern-size-y);
+    background-position: 0 0;
+    animation: patternScrollBg 120s linear infinite;
+  }
+}

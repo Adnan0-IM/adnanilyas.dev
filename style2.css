@@ -1,0 +1,100 @@
+/* Moving grid background using an external image.
+   Drop your grid image into /public (e.g., /grid.png) and adjust the variables.
+*/
+
+:root {
+  /* Path to your grid image. Example: url("/grid.png") or url("/grid.jpg") */
+  --grid-image: url("/grid.png");
+
+  /* Tile size: set to the pixel size you want for each grid cell block. */
+  /* --grid-size-x: 640px;
+  --grid-size-y: 640px; */
+
+  /* Visual tweaks */
+  /* --grid-opacity: 0.35; overall visibility of the grid */
+  /* --grid-blend: normal; try: overlay | soft-light | screen */
+  /* --grid-filter: none; e.g., brightness(1.1) contrast(1.1) */
+
+  /* Motion controls */
+  --grid-speed-1: 120s; /* slower layer */
+  --grid-speed-2: 40s; /* slower or faster second layer */
+}
+
+/* Make sure the page can host fixed overlays */
+html,
+body {
+  min-height: 100%;
+}
+body {
+  position: relative;
+}
+
+@keyframes gridScrollDiagPos {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+@keyframes gridScrollDiagNeg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 450% 4100%;
+  }
+}
+
+/* Two layers for a subtle parallax drift */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: var(--grid-image);
+  background-repeat: repeat;
+  background-size: var(--grid-size-x) var(--grid-size-y);
+  background-position: 0 0;
+  opacity: var(--grid-opacity);
+  mix-blend-mode: var(--grid-blend);
+  filter: var(--grid-filter);
+}
+
+/* Layer 1: up-right drift */
+/* body::before {
+  animation: gridScrollDiagPos var(--grid-speed-1) linear infinite;
+} */
+
+/* Layer 2: up-left drift, slightly different pace for variation */
+body::after {
+  animation: gridScrollDiagNeg var(--grid-speed-2) linear infinite;
+}
+
+/* Optional: rotate the grid (e.g., 90deg for vertical feel) */
+/* .grid-rotate-90 body::before,
+.grid-rotate-90 body::after {
+  transform: rotate(90deg);
+  transform-origin: center;
+} */
+
+/* Respect users who prefer reduced motion */
+/* @media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+} */
+
+/*
+Usage:
+1) Place your grid asset at /public/grid.png (or update --grid-image).
+2) Include this stylesheet in index.html, after your base styles:
+   <link rel="stylesheet" href="/style2.css" />
+3) Tune --grid-size-x / --grid-size-y to match your grid cell size.
+4) To change direction/speed, edit --grid-speed-* or swap keyframes.
+5) Try mix-blend-mode: overlay or soft-light for nicer theme blending.
+*/
