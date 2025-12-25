@@ -4,7 +4,7 @@ import { ModeToggle } from "../mode-toggle";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-40 backdrop-blur-md border-border border-b ">
+      <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-border border-b ">
         <div className="container px-4 md:px-16 lg:px-32 xl:px-64   mx-auto">
           <nav className="h-14 hidden sm:flex items-center justify-between">
             <a
