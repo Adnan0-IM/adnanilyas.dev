@@ -175,7 +175,7 @@ export default function ProjectCard() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-muted-foreground text-center md:text-left text-base"
+                  className="text-muted-foreground text-center text-sm "
                 >
                   {card.description}
                 </motion.p>

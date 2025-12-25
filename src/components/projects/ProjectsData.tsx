@@ -4,7 +4,7 @@ import ygGlobal from "../../assets/projects/yg-global.png";
 import bcggi from "../../assets/projects/bcggi.png";
 export const cards = [
   {
-    description: "Full‑stack Investment Platform",
+    description: "Full-stack investment platform with admin panel to manage users and carousel.",
     title: "Finance Teque Investment",
     src: financetequecv,
     liveDemo: "https://financetequecv.com",
@@ -18,7 +18,7 @@ export const cards = [
             <h4 className="text-sm font-semibold text-foreground">Problem</h4>
             <p className="text-muted-foreground">
               Secure onboarding for personal and corporate investors, with an
-              admin panel to manage users and plan access.
+              admin panel to manage users and carousel.
             </p>
           </div>
           <div>
@@ -31,8 +31,8 @@ export const cards = [
           <div>
             <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
             <p className="text-muted-foreground">
-              Self‑serve registration and admin control improved user
-              management, trust, and conversions across investor types.
+              Self‑serve registration and admin control, user
+              management.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export const cards = [
     },
   },
   {
-    description: "Full‑stack Business Manager",
+    description: "Full‑stack Business Manager to help  make better decisions.",
     title: "Inzacal",
     src: inzacal,
     liveDemo: "https://inzacal-production.up.railway.app/",
@@ -69,9 +69,7 @@ export const cards = [
           <div>
             <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
             <p className="text-muted-foreground">
-              Centralized visibility enables better decisions on investments and
-              expansion; automated compliance, reporting, and alerts streamline
-              operations and accountability, accuracy, efficiency.
+              Smooth Full stack app to help business owners make good decisions by recieving notifications about products.
             </p>
           </div>
         </div>
@@ -79,7 +77,7 @@ export const cards = [
     },
   },
   {
-    description: "YG Investment Platform",
+    description: "YG Investment Platform for showcasing investment services.",
     title: "YG Global Investment ",
     src: ygGlobal,
     liveDemo: "https://yg-investment.vercel.app/",
@@ -106,7 +104,7 @@ export const cards = [
           <div>
             <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
             <p className="text-muted-foreground">
-              Fast-loading site on Vercel with clear content architecture and
+              Smooth and aesthetic experience with clear content architecture and
               smooth navigation across devices.
             </p>
           </div>
@@ -115,7 +113,7 @@ export const cards = [
     },
   },
   {
-    description: "BCGGI",
+    description: "BCGGI: Bakarean Centre for Global Governance and Innovation",
     title: "Bakarean Centre",
     src: bcggi,
     liveDemo: "https://bcggi.org",
@@ -143,7 +141,7 @@ export const cards = [
             <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
             <p className="text-muted-foreground">
               Well-organized pages that improve understanding and engagement for
-              visitors and stakeholders.
+              visitors.
             </p>
           </div>
         </div>

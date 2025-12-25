@@ -35,7 +35,7 @@ const Experience = () => {
           <ul className="list-disc text-sm pl-6 md:pl-8">
             <li>
               Built and deployed production-ready web applications using React,
-              TypeScript, Node.js, and Express.
+              TypeScript, Node.js, and Express in a startup environment.
             </li>
             <li>
               Contributed to the Finance-Teque Investment Platform, working
