@@ -4,7 +4,7 @@ import ygGlobal from "../../assets/projects/yg-global.png";
 import bcggi from "../../assets/projects/bcggi.png";
 export const cards = [
   {
-    description: "Full-stack investment platform with admin panel to manage users and carousel.",
+    description: "Full-stack investment platform along with admin panel.",
     title: "Finance Teque Investment",
     src: financetequecv,
     liveDemo: "https://financetequecv.com",

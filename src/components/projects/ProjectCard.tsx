@@ -83,7 +83,7 @@ export default function ProjectCard() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
+                <div className="flex relative  justify-between items-start p-4">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
@@ -93,7 +93,7 @@ export default function ProjectCard() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-muted-foreground text-base"
+                      className="text-muted-foreground absolute sm:inline max-w-[350px] sm:max-w-fit  top-16 text-sm sm:text-base"
                     >
                       {active.description}
                     </motion.p>
@@ -125,7 +125,7 @@ export default function ProjectCard() {
                     </motion.a>
                   </div>
                 </div>
-                <div className="relative px-4">
+                <div className={`${active.title.length >= 16 ? "pt-7": "pt-10"} relative  sm:pt-8 px-4`}>
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
