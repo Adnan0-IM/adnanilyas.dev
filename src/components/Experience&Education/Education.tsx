@@ -32,7 +32,7 @@ const Education = () => {
             </h3>
           </div>
           <ul className="list-disc text-sm  pl-6 md:pl-8">
-            <li>GPA: 4.39</li>
+            {/* <li>GPA: 4.46</li> */}
             <li>Honors: Top Scorer Award</li>
             <li>Relevant Coursework: System Analysis and Design</li>
           </ul>
