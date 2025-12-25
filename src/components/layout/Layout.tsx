@@ -6,12 +6,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-border border-b ">
         <div className="container px-4 md:px-16 lg:px-32 xl:px-64   mx-auto">
-          <nav className="h-14 hidden sm:flex items-center justify-between">
+          <nav className="h-14 hidden sm:flex font-serif items-center justify-between">
             <a
               href="#home"
               className="font-medium tracking-tight hover:text-primary"
             >
-              AI
+              Adnan Iliyasu
             </a>
             <ul className="flex items-center gap-4 md:gap-6 text-sm">
               <li>
@@ -54,7 +54,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="sm:hidden flex items-center justify-between h-14">
             <a
               href="#home"
-              className="font-medium tracking-tight hover:text-primary"
+              className="font-bold font-serif tracking-tight hover:text-primary"
             >
               Adnan Iliyasu
             </a>
