@@ -56,7 +56,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               href="#home"
               className="font-medium tracking-tight hover:text-primary"
             >
-              AI
+              Adnan Iliyasu
             </a>
             <ModeToggle />
           </div>
