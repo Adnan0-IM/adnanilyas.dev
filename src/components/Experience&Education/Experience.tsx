@@ -67,7 +67,7 @@ const Experience = () => {
         </a>
         <div className="bg-background flex flex-col gap-2 p-4 rounded-md">
           <div>
-            <h5 className="text-muted-foreground text-xs">2025</h5>
+            <h5 className="text-muted-foreground text-xs">2024</h5>
             <h3 className="text-foreground text-base font-medium">
               Startup Jigawa
             </h3>
@@ -96,7 +96,7 @@ const Experience = () => {
         </a>
         <div className="bg-background flex flex-col gap-2 p-4 rounded-md">
           <div>
-            <h5 className="text-muted-foreground text-xs">2022</h5>
+            <h5 className="text-muted-foreground text-xs">2022 - 2023</h5>
             <h3 className="text-foreground text-base font-medium">
               Front-End Mentor
             </h3>
