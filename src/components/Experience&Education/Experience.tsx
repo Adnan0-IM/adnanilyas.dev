@@ -57,6 +57,47 @@ const Experience = () => {
         </div>
       </li>
 
+      <li className="relative pl-8 md:pl-10">
+        <a
+          href="https://naszat.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-0 top-6 -translate-x-1/2"
+        >
+          <img
+            className="size-10 md:size-12 rounded-full bg-[#1b1c1e] object-contain cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
+            src="/naszat.png"
+            alt="Naszat Labs logo"
+          />
+        </a>
+        <div className="bg-background flex flex-col gap-2 p-4 rounded-md">
+          <div>
+            <h5 className="text-xs text-muted-foreground">
+              Jan 2025 — Ongoing
+            </h5>
+            <h3 className="text-foreground text-base font-medium">
+              Naszat Labs{" "}
+            </h3>
+            <h4 className="text-sm text-muted-foreground">
+              Frontend Developer — Remote
+            </h4>
+          </div>
+          <ul className="list-disc text-sm pl-6 md:pl-8">
+            <li>
+              Collaborated on a multi-tenant school management system used as a
+              commercial product.
+            </li>
+            <li>
+              Implemented CRUD operations for school management, including
+              school creation and configuration.
+            </li>
+            <li>
+              Built UI flows that allow users to register schools under
+              organizations and select paid features during signup.
+            </li>
+          </ul>
+        </div>
+      </li>
       <li className="relative pl-10">
         <a href="#" className="absolute left-0 top-6 -translate-x-1/2">
           <img
