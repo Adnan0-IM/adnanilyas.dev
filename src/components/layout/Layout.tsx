@@ -9,6 +9,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [key, setKey] = React.useState("");
   const [error, setError] = React.useState("");
   const [spinCount, setSpinCount] = React.useState(0);
+  const [renderModal, setRenderModal] = React.useState(false);
+  const [isClosingModal, setIsClosingModal] = React.useState(false);
 
   const gardenKey = import.meta.env.VITE_GARDEN_KEY;
   const gardenUrl = import.meta.env.VITE_GARDEN_URL;
@@ -39,6 +41,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setError("");
     setKey("");
   };
+
+  React.useEffect(() => {
+    if (showModal) {
+      setRenderModal(true);
+      setIsClosingModal(false);
+      return;
+    }
+
+    if (!renderModal) return;
+
+    setIsClosingModal(true);
+    const timer = window.setTimeout(() => {
+      setRenderModal(false);
+      setIsClosingModal(false);
+    }, 220);
+
+    return () => window.clearTimeout(timer);
+  }, [showModal, renderModal]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky  top-0 z-40 bg-background/80 backdrop-blur border-border border-b ">
@@ -84,7 +105,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </a>
               </li>
               <Button
-                onClick={() => setShowModal(!showModal)}
+                onClick={() => setShowModal((prev) => !prev)}
                 className="hover:text-white hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded-sm px-2 py-1 "
               >
                 Garden
@@ -103,7 +124,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </a>
               <Button
                 type="button"
-                onClick={() => setShowModal(!showModal)}
+                onClick={() => setShowModal((prev) => !prev)}
                 className="hover:text-white hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded-sm px-2 py-1 "
               >
                 Garden
@@ -112,8 +133,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             <ModeToggle />
           </div>
-          {showModal && (
-            <div className="absolute right-0 top-16 md:right-1/6 w-full max-w-xs mx-auto bg-background border border-border rounded-lg shadow-lg p-6 z-50">
+          {renderModal && (
+            <div
+              className={`absolute right-0 top-16 md:right-1/6 w-full max-w-xs mx-auto bg-background border border-border rounded-lg shadow-lg p-6 z-50 transform-gpu will-change-transform ${
+                isClosingModal
+                  ? "animate-out fade-out-0 zoom-out-95 slide-out-to-top-2 duration-200"
+                  : "animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
+              }`}
+            >
               <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
                   <p className="text-lg font-semibold text-primary">
