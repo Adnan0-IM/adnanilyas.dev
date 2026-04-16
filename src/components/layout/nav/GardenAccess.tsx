@@ -1,6 +1,7 @@
 import React from "react";
 import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useOutsideClick } from "@/hooks/use-outside-click";
 
 type GardenButtonProps = {
   onOpen: () => void;
@@ -32,6 +33,7 @@ export const GardenModal = ({ isOpen, onOpenChange }: GardenModalProps) => {
   const [spinCount, setSpinCount] = React.useState(0);
   const [shouldRender, setShouldRender] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+  const modalRef = React.useRef<HTMLDivElement>(null);
 
   const gardenKey = import.meta.env.VITE_GARDEN_KEY;
   const gardenUrl = import.meta.env.VITE_GARDEN_URL;
@@ -85,10 +87,17 @@ export const GardenModal = ({ isOpen, onOpenChange }: GardenModalProps) => {
     return () => window.clearTimeout(timer);
   }, [isOpen, shouldRender]);
 
+  useOutsideClick(modalRef, () => {
+    if (isOpen) {
+      onOpenChange(false);
+    }
+  });
+
   if (!shouldRender) return null;
 
   return (
     <div
+      ref={modalRef}
       className={`absolute right-0 top-16 md:right-1/6 w-full max-w-xs mx-auto bg-background border border-border rounded-lg shadow-lg p-6 z-50 transform-gpu will-change-transform ${
         isClosing
           ? "animate-out fade-out-0 zoom-out-95 slide-out-to-top-2 duration-200"
