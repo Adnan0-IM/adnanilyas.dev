@@ -8,7 +8,7 @@ type NavLinksProps = {
 };
 
 const defaultLinkClassName =
-  "hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded px-1 py-0.5";
+  "hover:border-b-2 hover:text-primary rounded-none  border-primary  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded mx-1";
 
 const NavLinks = ({
   className,
