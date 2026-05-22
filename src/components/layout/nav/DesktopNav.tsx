@@ -8,8 +8,8 @@ type DesktopNavProps = {
 
 const DesktopNav = ({ onOpenGarden }: DesktopNavProps) => {
   return (
-    <nav className="h-14 hidden sm:flex font-serif items-center justify-between">
-      <a href="#home" className="font-medium tracking-tight hover:text-primary hover:border-b-2 rounded-none border-primary py-0">
+    <nav className="h-14 hidden sm:flex font-sans items-center justify-between">
+      <a href="#home" className="font-medium font-serif tracking-tight hover:text-primary hover:border-b-2 rounded-none border-primary py-0">
         Adnan Iliyasu
       </a>
 
