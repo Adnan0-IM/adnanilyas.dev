@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import NavLinks from "./NavLinks";
 import { GardenButton } from "./GardenAccess";
+import Logo from "@/components/logo";
 
 type DesktopNavProps = {
   onOpenGarden: () => void;
@@ -9,8 +10,8 @@ type DesktopNavProps = {
 const DesktopNav = ({ onOpenGarden }: DesktopNavProps) => {
   return (
     <nav className="h-14 hidden sm:flex font-sans items-center justify-between">
-      <a href="#home" className="font-medium font-serif tracking-tight hover:text-primary hover:border-b-2 rounded-none border-primary py-0">
-        Adnan Iliyasu
+      <a href="#home" className="size-13 -ml-2">
+        <Logo />
       </a>
 
       <div className="flex items-center gap-4 md:gap-6 text-sm">

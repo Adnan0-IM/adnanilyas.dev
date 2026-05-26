@@ -4,6 +4,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import NavLinks from "./NavLinks";
 import { GardenButton } from "./GardenAccess";
+import Logo from "@/components/logo";
 
 type MobileNavProps = {
   onOpenGarden: () => void;
@@ -48,9 +49,9 @@ const MobileNav = ({ onOpenGarden }: MobileNavProps) => {
     <div className="sm:hidden flex items-center justify-between gap-3 h-14">
       <a
         href="#home"
-        className="font-bold font-serif tracking-tight hover:text-primary hover:border-b-2 rounded-none border-primary"
+        className="size-13 -ml-2"
       >
-        AI
+        <Logo />
       </a>
 
       <div className="flex items-center gap-2">
