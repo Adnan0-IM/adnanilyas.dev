@@ -2,7 +2,43 @@ import financetequecv from "../../assets/projects/financetequecv.png";
 import inzacal from "../../assets/projects/inzacal.png";
 import ygGlobal from "../../assets/projects/yg-global.png";
 import bcggi from "../../assets/projects/bcggi.png";
+import veridoc from "../../assets/projects/veridoc.png";
 export const cards = [
+  {
+    description: "Secure Document Issuing and Verification Platform for Organizations.",
+    title: "VeriDoc",
+    src: veridoc,
+    liveDemo: "https://vs.adnanilyas.dev",
+    liveDemoText: "Visit",
+    githubLinkText: "Code",
+    githubLink: "https://github.com/Adnan0-IM/vs-frontend",
+    content: () => {
+      return (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Problem</h4>
+            <p className="text-muted-foreground">
+              Secure document issuing and verification using digital signature and qr-codes
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Role</h4>
+            <p className="text-muted-foreground">
+              Built full stack: auth, role‑based flows, rsa keys generation, admin
+              dashboard, document uploads, APIs, deployment.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
+            <p className="text-muted-foreground">
+              Self‑serve registration and admin control, user
+              management.
+            </p>
+          </div>
+        </div>
+      );
+    },
+  },
   {
     description: "Full-stack investment platform along with admin panel.",
     title: "Finance Teque Investment",
