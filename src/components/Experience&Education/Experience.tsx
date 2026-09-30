@@ -1,3 +1,7 @@
+import shamrock from "@/assets/certificates/shamrock-logo.png"
+import startup from "@/assets/certificates/startup-jigawa-logo.jpg"
+import naszat from "@/assets/certificates/naszat.png"
+import frontendMentor from  "@/assets/certificates/frontend-mentor-logo.svg"
 import { motion } from "motion/react";
 const Experience = () => {
   return (
@@ -16,7 +20,7 @@ const Experience = () => {
         >
           <img
             className="size-10 md:size-12 rounded-full bg-white object-contain cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/shamrock-logo.png"
+            src={shamrock}
             alt="Shamrock logo"
           />
         </a>
@@ -66,7 +70,7 @@ const Experience = () => {
         >
           <img
             className="size-10 md:size-12 rounded-full bg-[#1b1c1e] object-contain cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/naszat.png"
+            src={naszat}
             alt="Naszat Labs logo"
           />
         </a>
@@ -102,7 +106,7 @@ const Experience = () => {
         <a href="#" className="absolute left-0 top-6 -translate-x-1/2">
           <img
             className="size-12 rounded-full object-cover cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/startup-jigawa-logo.jpg"
+            src={startup}
             alt="Startup Jigawa logo"
           />
         </a>
@@ -131,7 +135,7 @@ const Experience = () => {
         >
           <img
             className="size-12 rounded-full bg-white object-cover cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/frontend-mentor-logo.svg"
+            src={frontendMentor}
             alt="Frontend Mentor logo"
           />
         </a>

@@ -5,7 +5,7 @@ import {
   useTransform,
   useReducedMotion,
 } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../components/ui/button";
 import profilepic from "@/assets/profile/adnan-u.png";
 
@@ -28,6 +28,12 @@ const Hero = () => {
     offset: ["start end", "end start"], // parallax as section enters/leaves
   });
   const yParallax = useTransform(scrollYProgress, [0, 1], [-16, 16]);
+
+  // `useReducedMotion` is `null` on the server but resolves on the client's
+  // first render, so gate it on mount to keep hydration deterministic.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const reduceMotion = mounted && prefersReduced;
 
   return (
     <section id="home">
@@ -118,8 +124,8 @@ const Hero = () => {
 
           <div ref={imgContainerRef}>
             <motion.img
-              style={{ y: prefersReduced ? undefined : yParallax }}
-              whileHover={!prefersReduced ? { scale: 1.04 } : undefined}
+              style={{ y: reduceMotion ? undefined : yParallax }}
+              whileHover={!reduceMotion ? { scale: 1.04 } : undefined}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.3 }}
