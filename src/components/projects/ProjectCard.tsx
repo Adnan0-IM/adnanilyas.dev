@@ -1,9 +1,9 @@
 import { useEffect, useId, useRef, useState, type RefObject } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { useOutsideClick } from "@/hooks/use-outside-click";
 import { Github, Globe2 } from "lucide-react";
 import { cards } from "./ProjectsData";
 import { CloseIcon } from "./CloseIcon";
+import { useOutsideClick } from "../../hooks/use-outside-click";
 
 export default function ProjectCard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(

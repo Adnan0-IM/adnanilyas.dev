@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import {
   motion,
@@ -7,6 +6,7 @@ import {
   useReducedMotion,
 } from "motion/react";
 import { useRef } from "react";
+import { Button } from "../components/ui/button";
 
 const Hero = () => {
   // container and child variants

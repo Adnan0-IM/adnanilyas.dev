@@ -7,6 +7,7 @@ import Projects from "./sections/Projects";
 import TechStack from "./sections/TechStack";
 import ReadingProgress from "./components/anim/ReadingProgress";
 import RefreshToTop from "./components/RefreshToTop";
+import "./index.css";
 
 function App() {
   return (
@@ -24,3 +25,4 @@ function App() {
 }
 
 export default App;
+

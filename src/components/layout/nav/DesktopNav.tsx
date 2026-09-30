@@ -1,7 +1,7 @@
-import { ModeToggle } from "@/components/mode-toggle";
 import NavLinks from "./NavLinks";
 import { GardenButton } from "./GardenAccess";
-import Logo from "@/components/logo";
+import Logo from "../../logo";
+import { ModeToggle } from "../../mode-toggle";
 
 type DesktopNavProps = {
   onOpenGarden: () => void;

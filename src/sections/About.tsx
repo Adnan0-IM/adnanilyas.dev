@@ -1,5 +1,5 @@
-import AboutSheet from "@/components/about/AboutSheet";
 import { motion } from "motion/react";
+import AboutSheet from "../components/about/AboutSheet";
 
 const About = () => {
   return (

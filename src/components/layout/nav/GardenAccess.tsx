@@ -1,7 +1,7 @@
 import React from "react";
 import { RefreshCw } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useOutsideClick } from "@/hooks/use-outside-click";
+import { Button } from "../../ui/button";
+import { useOutsideClick } from "../../../hooks/use-outside-click";
 
 type GardenButtonProps = {
   onOpen: () => void;

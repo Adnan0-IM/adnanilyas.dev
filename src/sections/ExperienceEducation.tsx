@@ -1,8 +1,8 @@
-import Education from "@/components/Experience&Education/Education";
-import Experience from "@/components/Experience&Education/Experience";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import { motion } from "motion/react";
 import { useState } from "react";
+import Education from "../components/Experience&Education/Education";
+import Experience from "../components/Experience&Education/Experience";
 
 const ExperienceEducation = () => {
   const [tab, setTab] = useState<"experience" | "education">("experience");
@@ -27,7 +27,7 @@ const ExperienceEducation = () => {
               : "My Educations & Certifications"}
           </h3>
           <div>
-            <Tabs value={tab} onValueChange={(v) => setTab(v as typeof tab)}>
+            <Tabs value={tab} onValueChange={(v: string) => setTab(v as typeof tab)}>
               <TabsList className="w-full grid grid-cols-2">
                 <TabsTrigger className="cursor-pointer" value="experience">
                   Experience
