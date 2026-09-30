@@ -1,15 +1,15 @@
-import react from "@/assets/react.svg";
-import nodejs from "@/assets/nodejs.svg";
-import typescript from "@/assets/typescript.svg";
-import tailwind from "@/assets/tailwind.svg";
-import mongodb from "@/assets/mongodb.svg";
-import postgresql from "@/assets/postgresql.svg";
-import reactd from "@/assets/react-d.svg";
-import nodejsd from "@/assets/nodejs-d.svg";
-import typescriptd from "@/assets/typescript-d.svg";
-import tailwindd from "@/assets/tailwind-d.svg";
-import mongodbd from "@/assets/mongodb-d.svg";
-import postgresqld from "@/assets/postgresql-d.svg";
+import react from "@/assets/tech-stack/react.svg";
+import nodejs from "@/assets/tech-stack/nodejs.svg";
+import typescript from "@/assets/tech-stack/typescript.svg";
+import tailwind from "@/assets/tech-stack/tailwind.svg";
+import mongodb from "@/assets/tech-stack/mongodb.svg";
+import postgresql from "@/assets/tech-stack/postgresql.svg";
+import reactd from "@/assets/tech-stack/react-d.svg";
+import nodejsd from "@/assets/tech-stack/nodejs-d.svg";
+import typescriptd from "@/assets/tech-stack/typescript-d.svg";
+import tailwindd from "@/assets/tech-stack/tailwind-d.svg";
+import mongodbd from "@/assets/tech-stack/mongodb-d.svg";
+import postgresqld from "@/assets/tech-stack/postgresql-d.svg";
 
 import { motion } from "motion/react";
 import { useTheme } from "@/components/theme-provider";
