@@ -1,8 +1,8 @@
-import financetequecv from "../../assets/projects/financetequecv.png";
-import inzacal from "../../assets/projects/inzacal.png";
-import ygGlobal from "../../assets/projects/yg-global.png";
-import bcggi from "../../assets/projects/bcggi.png";
-import veridoc from "../../assets/projects/veridoc.png";
+import financetequecv from "@/assets/projects/financetequecv.png";
+import inzacal from "@/assets/projects/inzacal.png";
+import ygGlobal from "@/assets/projects/yg-global.png";
+import bcggi from "@/assets/projects/bcggi.png";
+import veridoc from "@/assets/projects/veridoc.png";
 export const cards = [
   {
     description: "Secure Document Issuing and Verification Platform for Organizations.",

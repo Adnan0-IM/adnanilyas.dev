@@ -12,8 +12,8 @@ import mongodbd from "@/assets/tech-stack/mongodb-d.svg";
 import postgresqld from "@/assets/tech-stack/postgresql-d.svg";
 
 import { motion } from "motion/react";
-import { useTheme } from "@/components/theme-provider";
-import { RightToLeft } from "@/components/stack/RightToLeft";
+import { useTheme } from "../components/theme-provider";
+import { RightToLeft } from "../components/stack/RightToLeft";
 
 const TechStack = () => {
   const { theme } = useTheme();

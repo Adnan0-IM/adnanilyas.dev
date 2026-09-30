@@ -1,10 +1,10 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
-import { Button } from "@/components/ui/button";
 import NavLinks from "./NavLinks";
 import { GardenButton } from "./GardenAccess";
-import Logo from "@/components/logo";
+import Logo from "../../logo";
+import { ModeToggle } from "../../mode-toggle";
+import { Button } from "../../ui/button";
 
 type MobileNavProps = {
   onOpenGarden: () => void;

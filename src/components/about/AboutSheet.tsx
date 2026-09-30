@@ -5,9 +5,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+} from "../../components/ui/sheet";
 import { Mail, FileText } from "lucide-react";
+import { Button } from "../ui/button";
 
 const AboutSheet = () => {
   return (

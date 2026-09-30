@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import {
   motion,
@@ -7,6 +6,8 @@ import {
   useReducedMotion,
 } from "motion/react";
 import { useRef } from "react";
+import { Button } from "../components/ui/button";
+import profilepic from "@/assets/profile/adnan-u.png";
 
 const Hero = () => {
   // container and child variants
@@ -124,7 +125,7 @@ const Hero = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2, duration: 0.3 }}
               className="rounded-md hidden md:block will-change-transform"
-              src={"/adnan-u.png"}
+              src={profilepic}
               alt="Adnan picture"
             />
           </div>

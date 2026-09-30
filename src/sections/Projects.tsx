@@ -1,5 +1,5 @@
-import ProjectCard from "@/components/projects/ProjectCard";
 import { motion } from "motion/react";
+import ProjectCard from "../components/projects/ProjectCard";
 
 const Projects = () => {
   return (

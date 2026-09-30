@@ -1,26 +1,33 @@
-import Layout from "./components/layout/Layout";
-import About from "./sections/About";
-import Contact from "./sections/Contact";
-import ExperienceEducation from "./sections/ExperienceEducation";
-import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
-import TechStack from "./sections/TechStack";
-import ReadingProgress from "./components/anim/ReadingProgress";
-import RefreshToTop from "./components/RefreshToTop";
+import {lazy, Suspense} from "react";
+
+const Layout = lazy(() => import("./components/layout/Layout"));
+const About = lazy(() => import("./sections/About"));
+const Contact = lazy(() => import("./sections/Contact"));
+const ExperienceEducation = lazy(() => import("./sections/ExperienceEducation"));
+const Hero = lazy(() => import("./sections/Hero"));
+const Projects = lazy(() => import("./sections/Projects"));
+const TechStack = lazy(() => import("./sections/TechStack"));
+const ReadingProgress = lazy(() => import("./components/anim/ReadingProgress"));
+const RefreshToTop = lazy(() => import("./components/RefreshToTop"));
+
+import "./index.css";
 
 function App() {
   return (
-    <Layout>
-      <RefreshToTop/>
-      <ReadingProgress />
-      <Hero />
-      <About />
-      <TechStack />
-      <ExperienceEducation />
-      <Projects />
-      <Contact />
-    </Layout>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Layout>
+        <RefreshToTop />
+        <ReadingProgress />
+        <Hero />
+        <About />
+        <TechStack />
+        <ExperienceEducation />
+        <Projects />
+        <Contact />
+      </Layout>
+    </Suspense>
   );
 }
 
 export default App;
+
