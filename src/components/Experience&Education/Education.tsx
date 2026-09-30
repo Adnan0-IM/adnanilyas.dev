@@ -1,5 +1,11 @@
 import { Award } from "lucide-react";
 import { motion } from "motion/react";
+import fud from "@/assets/certificates/fud.png"
+import iman from "@/assets/certificates/iman-sec.jpeg"
+import simplilearn from "@/assets/certificates/simplilearn.svg"
+import bsv from "@/assets/certificates/bsv.svg"
+import shamrock from "@/assets/certificates/shamrock-logo.png"
+
 
 const Education = () => {
   return (
@@ -18,7 +24,7 @@ const Education = () => {
         >
           <img
             className="size-10 md:size-12 rounded-full bg-white object-contain cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/fud.png"
+            src={fud}
             alt="Federal University Dutse logo"
           />
         </a>
@@ -43,7 +49,7 @@ const Education = () => {
         <a href="#" className="absolute left-0 top-6 -translate-x-1/2">
           <img
             className="size-12 rounded-full bg-white object-cover cursor-pointer shadow-sm ring-2 ring-muted-foreground/30"
-            src="/iman-sec.jpeg"
+            src={iman}
             alt="Iman Secondary School logo"
           />
         </a>
@@ -87,7 +93,7 @@ const Education = () => {
               <div className="flex items-start gap-3 rounded-md p-3 border border-muted-foreground/10 hover:border-muted-foreground/20 hover:bg-muted/10 transition">
                 <img
                   className="size-8 rounded bg-white object-contain shadow-sm ring-1 ring-muted-foreground/20"
-                  src="/shamrock-logo.png"
+                  src={shamrock}
                   alt="Certificate icon"
                 />
                 <div className="flex-1">
@@ -112,7 +118,7 @@ const Education = () => {
               <div className="flex items-start gap-3 rounded-md p-3 border border-muted-foreground/10 hover:border-muted-foreground/20 hover:bg-muted/10 transition">
                 <img
                   className="size-8 rounded bg-sky-700 shadow-sm ring-1 ring-muted-foreground/20"
-                  src="/simplilearn.svg"
+                  src={simplilearn}
                   alt="Certificate icon"
                 />
                 <div className="flex-1">
@@ -137,7 +143,7 @@ const Education = () => {
               <div className="flex items-start gap-3 rounded-md p-3 border border-muted-foreground/10 hover:border-muted-foreground/20 hover:bg-muted/10 transition">
                 <img
                   className="size-8 rounded bg-white shadow-sm ring-1 ring-muted-foreground/20"
-                  src="/bsv.svg"
+                  src={bsv}
                   alt="Certificate icon"
                 />
                 <div className="flex-1">

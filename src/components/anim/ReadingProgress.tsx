@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring, useReducedMotion } from "motion/react";
 
 const ReadingProgress = () => {
@@ -9,7 +10,10 @@ const ReadingProgress = () => {
     mass: 0.15,
   });
 
-  if (prefersReduced) return null;
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (mounted && prefersReduced) return null;
 
   return (
     <motion.div
