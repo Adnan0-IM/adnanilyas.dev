@@ -62,7 +62,11 @@ export default {
               name="viewport"
               content="width=device-width, initial-scale=1.0"
             />
-
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}})();`,
+              }}
+            />
             <title>
               Adnan Iliyasu Muhammad | Full-Stack Developer | React, TypeScript,
               Node.js
@@ -138,9 +142,12 @@ export default {
             <script type="module" src={assets.entry} />
           </head>
           <body id="app">
-            <App />
+            <div id="root">
+              <App />
+            </div>
           </body>
         </html>,
+        { identifierPrefix: "myapp-" },
       ),
       { headers: { "Content-Type": "text/html;charset=utf-8" } },
     );
