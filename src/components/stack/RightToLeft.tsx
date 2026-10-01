@@ -75,7 +75,8 @@ export const RightToLeft = () => {
     figmad,
   ];
 
-  items = useTheme().theme === "light" ? itemsDark : items;
+  const { resolvedTheme } = useTheme();
+  items = resolvedTheme === "light" ? itemsDark : items;
   return (
     <div className="flex mt-4 flex-col gap-2 items-center justify-center py-6">
       <h3 className="text-2xl font-medium">Some Helpers</h3>

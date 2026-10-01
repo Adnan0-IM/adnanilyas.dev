@@ -4,11 +4,11 @@ import { Button } from "./ui/button";
 import { useTheme } from "./theme-provider";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <div>
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <Button size="icon" variant={"ghost"} onClick={() => setTheme("light")}>
           <Sun className="font-black size-[17.4px]" />
         </Button>
