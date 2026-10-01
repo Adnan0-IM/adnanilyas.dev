@@ -16,7 +16,7 @@ import { useTheme } from "../components/theme-provider";
 import { RightToLeft } from "../components/stack/RightToLeft";
 
 const TechStack = () => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   let stacks = [
     { name: "React", icon: react, description: "UI Library" },
     { name: "Node.js", icon: nodejs, description: "JavaScript runtime" },
@@ -49,7 +49,7 @@ const TechStack = () => {
     },
     { name: "Tailwind CSS", icon: tailwindd, description: "CSS framework" },
   ];
-  stacks = theme === "light" ? stacksDark : stacks;
+  stacks = resolvedTheme === "light" ? stacksDark : stacks;
   return (
     <div className="container px-4 md:px-16 pt-12 sm:pt-20 lg:px-24 mx-auto">
       <div className="max-w-[600px] flex flex-col gap-4 items-center justify-center mx-auto">

@@ -67,7 +67,7 @@ const Hero = () => {
               }}
               className="text-lg"
             >
-              Full-Stack Developer based in Kano, Nigeria
+              Software Engineer based in Kano, Nigeria
             </motion.p>
 
             <motion.p
@@ -79,8 +79,8 @@ const Hero = () => {
               }}
               className="text-lg"
             >
-              I'm in my final year pursuing a Computer Science degree. I've
-              built production apps and shipped websites viewed by international
+              I'm a passionate software engineer with a strong foundation in computer science. I've
+              built production apps, contribute to open-source projects, and shipped websites viewed by international
               organizations.
             </motion.p>
 

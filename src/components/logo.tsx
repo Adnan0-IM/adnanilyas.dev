@@ -1,8 +1,8 @@
 import { useTheme } from "./theme-provider";
 
 const Logo = () => {
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
 
   const light = "#f9f5f2";
   const dark = "#12100e";
