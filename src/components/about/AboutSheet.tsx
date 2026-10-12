@@ -65,7 +65,7 @@ const AboutSheet = () => {
                 </h4>
                 <p className="text-sm text-muted-foreground">
                   Building full‑stack apps. Focus: React, TypeScript, Express,
-                  Node. Learning React Native.
+                  Node.
                 </p>
               </div>
 
