@@ -8,7 +8,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Adnan Iliyasu Muhammad",
-  jobTitle: "Full-Stack Developer",
+  jobTitle: "Software Engineer",
   url: "https://adnanilyas.dev",
   sameAs: [
     "https://github.com/Adnan0-IM",
@@ -68,20 +68,20 @@ export default {
               }}
             />
             <title>
-              Adnan Iliyasu Muhammad | Full-Stack Developer | React, TypeScript,
+              Adnan Iliyasu Muhammad | Software Engineer | React, TypeScript,
               Node.js
             </title>
             <meta
               name="title"
-              content="Adnan Iliyasu Muhammad | Full-Stack Developer | React, TypeScript, Node.js"
+              content="Adnan Iliyasu Muhammad | Software Engineer | React, TypeScript, Node.js"
             />
             <meta
               name="description"
-              content="Full-Stack Developer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development. Built production apps for international organizations."
+              content="Software Engineer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development. Built production apps for international organizations."
             />
             <meta
               name="keywords"
-              content="Adnan Iliyasu Muhammad, Full-Stack Developer, React Developer, TypeScript, Node.js, Web Developer Nigeria, Computer Science, Software Engineer, Frontend Developer, Backend Developer"
+              content="Adnan Iliyasu Muhammad, Software Engineer, React Developer, TypeScript, Node.js, Web Developer Nigeria, Computer Science, Software Engineer, Frontend Developer, Backend Developer"
             />
             <meta name="author" content="Adnan Iliyasu Muhammad" />
             <meta name="robots" content="index, follow" />
@@ -90,11 +90,11 @@ export default {
             <meta property="og:url" content="https://adnanilyas.dev/" />
             <meta
               property="og:title"
-              content="Adnan Iliyasu Muhammad | Full-Stack Developer"
+              content="Adnan Iliyasu Muhammad | Software Engineer"
             />
             <meta
               property="og:description"
-              content="Full-Stack Developer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development."
+              content="Software Engineer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development."
             />
             <meta
               property="og:image"
@@ -110,11 +110,11 @@ export default {
             <meta property="twitter:url" content="https://adnanilyas.dev/" />
             <meta
               property="twitter:title"
-              content="Adnan Iliyasu Muhammad | Full-Stack Developer"
+              content="Adnan Iliyasu Muhammad | Software Engineer"
             />
             <meta
               property="twitter:description"
-              content="Full-Stack Developer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development."
+              content="Software Engineer based in Kano, Nigeria. Final year Computer Science student specializing in React, TypeScript, Node.js, and modern web development."
             />
             <meta
               property="twitter:image"
