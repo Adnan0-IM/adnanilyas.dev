@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState, type RefObject } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Github, Globe2 } from "lucide-react";
-import { cards } from "./ProjectsData";
+import { cards, liveDemoIcons } from "./ProjectsData";
 import { CloseIcon } from "./CloseIcon";
 import { useOutsideClick } from "../../hooks/use-outside-click";
 
@@ -30,6 +30,10 @@ export default function ProjectCard() {
   }, [active]);
 
   useOutsideClick(ref as RefObject<HTMLDivElement>, () => setActive(null));
+
+  const activeProject = typeof active === "object" ? active : null;
+  const LiveDemoIcon =
+    liveDemoIcons[activeProject?.liveDemoIcon ?? "globe"] ?? Globe2;
 
   return (
     <>
@@ -107,22 +111,26 @@ export default function ProjectCard() {
                       exit={{ opacity: 0 }}
                       href={active.liveDemo}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 flex gap-2 items-center  py-2 text-sm rounded-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90"
                     >
-                      <Globe2 className="mb-0.5" size={15} />{" "}
+                      <LiveDemoIcon className="mb-0.5" size={15} />{" "}
                       {active.liveDemoText}
                     </motion.a>
-                    <motion.a
-                      layout
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      href={active.githubLink}
-                      target="_blank"
-                      className="px-4 py-2 flex gap-2 items-center text-sm rounded-lg font-bold bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                    >
-                      <Github size={18} /> {active.githubLinkText}
-                    </motion.a>
+                    {active.githubLink && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 flex gap-2 items-center text-sm rounded-lg font-bold bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      >
+                        <Github size={18} /> {active.githubLinkText}
+                      </motion.a>
+                    )}
                   </div>
                 </div>
                 <div className={`${active.title.length >= 16 ? "pt-7": "pt-10"} relative  sm:pt-8 px-4`}>

@@ -3,7 +3,111 @@ import inzacal from "@/assets/projects/inzacal.png";
 import ygGlobal from "@/assets/projects/yg-global.png";
 import bcggi from "@/assets/projects/bcggi.png";
 import veridoc from "@/assets/projects/veridoc.png";
-export const cards = [
+import nipeControl from "@/assets/projects/nipe-control.png";
+import ajinexDesktop from "@/assets/projects/ajinex-desktop.png";
+import type { ReactNode } from "react";
+import { Download, Github, Globe2 } from "lucide-react";
+
+export const liveDemoIcons = {
+  download: Download,
+  github: Github,
+  globe: Globe2,
+} as const;
+
+export type LiveDemoIcon = keyof typeof liveDemoIcons;
+
+export type Project = {
+  description: string;
+  title: string;
+  src: string;
+  liveDemo: string;
+  liveDemoText: string;
+  liveDemoIcon?: LiveDemoIcon;
+  githubLink?: string;
+  githubLinkText?: string;
+  content: () => ReactNode;
+};
+
+export const cards: Project[] = [
+  {
+    description: "Desktop shell widget that controls the Nipe Tor gateway.",
+    title: "Nipe Control",
+    src: nipeControl,
+    liveDemo: "https://github.com/Adnan0-IM/nipeControl",
+    liveDemoText: "Source",
+    liveDemoIcon: "github",
+    content: () => {
+      return (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Problem</h4>
+            <p className="text-muted-foreground">
+              Nipe routes traffic through a Tor gateway, but it is a terminal tool.
+              Checking whether traffic is actually going through Tor meant running
+              another command.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Role</h4>
+            <p className="text-muted-foreground">
+              Built the QML widget, settings panel, and Python helper end to end
+              for DankMaterialShell: live circuit status, exit IP and exit node
+              location, start/stop/restart, clipboard copy, notifications.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
+            <p className="text-muted-foreground">
+              Status refresh probes SOCKS directly and never elevates, so checking
+              the gateway never triggers an auth prompt. Privileged actions go
+              through pkexec instead of a permanent sudoers rule.
+            </p>
+          </div>
+        </div>
+      );
+    },
+  },
+  {
+    description: "Offline-first POS and business management desktop app.",
+    title: "Ajinex Desktop",
+    src: ajinexDesktop,
+    liveDemo: "https://ajinex.com/download/",
+    liveDemoText: "Download",
+    liveDemoIcon: "download",
+    content: () => {
+      return (
+        <div className="space-y-3">
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Problem</h4>
+            <p className="text-muted-foreground">
+              A cloud-only POS is useless at the moment of a transaction. In
+              stores with unreliable power and connectivity, the sale has to
+              complete and print a receipt whether or not there is a connection.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Role</h4>
+            <p className="text-muted-foreground">
+              Frontend developer on the Electron renderer: app shell and routes,
+              POS cart and checkout, inventory and stock, sales history with
+              per-record sync status, reports, user management, and role-aware
+              navigation. Built against typed IPC contracts in
+              src/shared/types.ts.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-semibold text-foreground">Outcome</h4>
+            <p className="text-muted-foreground">
+              Shipped in Ajinex Desktop 1.0.9 for Windows, macOS, and Linux. Sales
+              commit to an encrypted local database first and sync when
+              connectivity returns. The renderer never touches the database or
+              network directly.
+            </p>
+          </div>
+        </div>
+      );
+    },
+  },
   {
     description: "Secure Document Issuing and Verification Platform for Organizations.",
     title: "VeriDoc",
