@@ -98,7 +98,7 @@ export default {
             />
             <meta
               property="og:image"
-              content="https://adnanilyas.dev/og-image.png"
+              content="/og-image.png"
             />
             <meta
               property="og:site_name"
