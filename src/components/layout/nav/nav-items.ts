@@ -11,7 +11,7 @@ export const navItems: NavItem[] = [
   { label: "Contact", href: "#contact" },
   {
     label: "Blog",
-    href: "https://blog.adnanilyas.dev",
+    href: "https://blog.adnanilyas.com",
     external: true,
   },
 ];
